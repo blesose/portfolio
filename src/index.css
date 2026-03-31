@@ -61,3 +61,31 @@
     @apply bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent;
   }
 }
+/* ChatBot Responsive Styles */
+@media (max-width: 640px) {
+  .chatbot-container {
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  /* Prevent body scroll when chat is open on mobile */
+  body.chat-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* Smooth transitions for chat */
+.chat-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  .chatbot-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
