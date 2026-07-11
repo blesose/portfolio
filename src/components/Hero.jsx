@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { PERSONAL_INFO } from '../utils/constants';
+import  profileImage from '../assets/profile-image.jpeg'
 
 const Hero = ({ showToast }) => {
   const stats = [
@@ -111,7 +112,22 @@ const Hero = ({ showToast }) => {
               {/* Profile Image Placeholder */}
               <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 rounded-[2rem] overflow-hidden shadow-2xl">
                 <div className="w-full h-full flex items-center justify-center text-white text-8xl font-display">
-                  BO
+                   <img 
+                  src={profileImage}
+                  alt="Blessing Oga - Full Stack Developer"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image fails to load
+                    e.target.onerror = null;
+                    e.target.style.display = 'none';
+                    // Show initials as fallback
+                    const parent = e.target.parentElement;
+                    const fallback = document.createElement('div');
+                    fallback.className = 'w-full h-full flex items-center justify-center text-white text-8xl font-display';
+                    fallback.textContent = 'BO';
+                    parent.appendChild(fallback);
+                  }}
+                />
                 </div>
               </div>
 
