@@ -57,10 +57,11 @@ const ProjectModal = ({ project, onClose, showToast }) => {
             <div>
               <div className="flex items-center gap-2 text-sm text-zinc-500 mb-4">
                 <Calendar className="w-4 h-4" />
-                <span>{project.year || '2025'}</span>
+                <span>{project.year || '2026'}</span>
                 <Tag className="w-4 h-4 ml-4" />
                 <span className="capitalize">{project.category}</span>
               </div>
+              <div><span className="capitalize">{project.role}</span></div>
               <h4 className="font-semibold mb-2">Description</h4>
               <p className="text-zinc-600 dark:text-zinc-400">
                 {project.fullDescription || project.description}
@@ -75,33 +76,25 @@ const ProjectModal = ({ project, onClose, showToast }) => {
                   </span>
                 ))}
               </div>
-              
-              <h4 className="font-semibold mb-2">Key Features</h4>
-              <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-                {project.features ? (
-                  project.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="text-primary-500 mt-1">•</span>
-                      {feature}
-                    </li>
-                  ))
-                ) : (
-                  <>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-500 mt-1">•</span>
-                      RESTful API with Swagger documentation
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-500 mt-1">•</span>
-                      Responsive mobile-first design
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-500 mt-1">•</span>
-                      MongoDB database integration
-                    </li>
-                  </>
-                )}
-              </ul>
+              {/* Highlights - Unordered List under Technologies */}
+<div><span className="font-semibold mb-2">{project.infoTitle}</span></div>
+{project.highlights && project.highlights.length > 0 ? (
+  <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+    {project.highlights.map((highlight, index) => (
+      <li key={index} className="flex items-start gap-2">
+        <span className="text-primary-500 mt-1">•</span>
+        {highlight}
+      </li>
+    ))}
+  </ul>
+) : (
+  <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li className="flex items-start gap-2">
+      <span className="text-primary-500 mt-1">•</span>
+      No highlights available
+    </li>
+  </ul>
+)}
             </div>
           </div>
 

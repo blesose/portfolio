@@ -1,7 +1,8 @@
-import image from "../assets/images/Screenshot 2026-03-14 222942.png";
-import Image from "../assets/images/Screenshot 2026-03-14 223947.png";
-import picture from "../assets/images/Screenshot 2026-03-16 211136.png";
-import pic from "../assets/images/Screenshot 2026-03-16 213436.png";
+import image from "../assets/images/Screenshot 2026-07-17 140657.png";
+// import Image from "../assets/images/Screenshot 2026-0";
+import picture from "../assets/images/Screenshot 2026-07-17 140751.png";
+import pic from "../assets/images/Screenshot 2026-07-17 140900.png";
+
 
 // Personal Information
 export const PERSONAL_INFO = {
@@ -9,6 +10,7 @@ export const PERSONAL_INFO = {
   title: 'Junior Full Stack Developer',
   location: 'Lagos, Nigeria',
   email: 'codesose.dev@gmail.com',
+  available: 'Remote • Worldwide',
   phone: '+2347084752971',
   github: 'https://github.com/blesose',
   linkedin: 'https://www.linkedin.com/in/blessing-oga-53bb443a7/',
@@ -18,23 +20,24 @@ export const PERSONAL_INFO = {
 
 // Skills Data
 export const SKILLS = {
-  frontend: ['React.js', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript (ES6+)'],
+  frontend: ['React', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS',  ],
   backend: ['Node.js', 'Express.js'],
-  database: ['MongoDB', 'Mongoose'],
-  tools: ['Git', 'GitHub', 'Postman', 'Swagger UI', 'Firebase', 'Vite'],
+  database: ['PostgreSQL', 'Prisma ORM', 'MongoDB', 'Mongoose', 'Swagger UI /OpenAPI'],
+  tools: ['Git', 'GitHub', 'Postman', 'Vite', 'React Testing Library', 'Unit Testing', 'Integration Testing'],
 };
 
 // Experience Data
 export const EXPERIENCE = [
   {
     period: 'Feb 2025 – Nov 2025',
-    title: 'Junior Full Stack Developer (Training & Projects)',
+    title: 'Software Engineering Trainee',
     company: 'IT Skill Center / Tech Academy',
     description: [
-      'Completed intensive hands-on training in full stack web development (MERN stack)',
-      'Built multiple full stack applications with RESTful APIs and database integration',
-      'Documented API endpoints using Swagger UI',
-      'Developed responsive, mobile-first user interfaces with React and Tailwind CSS',
+      'Applied clean code principles while building production-style projects',
+      'Collaborated using Git and GitHub through feature-based workflows',
+      'Built full-stack web applications using modern software engineering practices.',
+      'Designed and documented RESTful APIs using Swagger/OpenAPI',
+      'Developed responsive user interfaces and integrated backend services',
       'Used Git and GitHub for version control and collaboration',
     ],
   },
@@ -44,44 +47,62 @@ export const EXPERIENCE = [
 export const PROJECTS = [
   {
     id: 1,
-    title: 'General Health Support Platform',
-    category: 'fullstack',
-    shortDescription: 'Full-stack health-focused web application with RESTful APIs',
-    description: 'A comprehensive health support platform with API documentation using Swagger UI, responsive React frontend, and MongoDB database.',
+    title: 'INK',
+    category: 'SaaS • Productivity',
+    role: 'Personal Project • Full-Stack Developer',
+    shortDescription: 'Real-Time Collaborative Whiteboard',
+    description: 'Built a real-time collaborative whiteboard enabling teams to draw, communicate, and collaborate seamlessly with live synchronization.',
     image: picture,
-    githubUrl: 'https://github.com/blesose/mylab',
-    liveUrl: 'https://mylabroyal.onrender.com',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'TailwindCSS', 'Swagger UI'],
+    githubUrl: 'https://github.com/blesose/INK',
+    liveUrl: 'https://ink-psi-livid.vercel.app',
+    technologies: ['React', 'TypeScript', 'Node.js', 'SocketIO', 'PostGreSQL', 'TailwindCSS', 'Prisma'],
     featured: false,
+    infoTitle: "Engineering Highlights",
+    highlights: [
+    "Real-time collaborative drawing",
+    "Authentication & workspaces",
+    "Socket.IO synchronization",
+    "PostgreSQL with Prisma ORM"
+  ]
   },
   {
     id: 2,
-    title: 'Number Plate Generator System',
-    category: 'fullstack',
-    shortDescription: 'Web-based number plate generation system with API integration',
-    description: 'A web application that generates custom number plates with preview functionality .',
+    title: 'Refilia',
+    category: 'Logistics • Commerce',
+    role: 'Team Project • Frontend Developer',
+    shortDescription: 'Gas Delivery Platform',
+    description: 'Contributed to the frontend of a modern gas delivery platform focused on simplifying cylinder refill ordering and tracking.',
     image: pic,
-    githubUrl: 'https://github.com/blesose/vehiclePlate',
-    technologies: [ 'Node.js', 'Express', 'HTML', 'CSS'],
+    githubUrl: 'coming soon',
+    technologies: [ 'React', 'TailwindCSS', 'JavaScript', 'HTML5'],
     featured: false,
+    infoTitle: "My Contributions",
+     highlights: [
+    "Frontend development in a collaborative team",
+    "Responsive mobile-first experience",
+    "Integrated REST APIs",
+    "Modern logistics ordering interface"
+  ]
   },
   {
     id: 3,
-    title: 'Tatt - Time Tracking & Task Management SaaS',
-    category: 'frontend',
-    // Dark-mode-first
-    // shortDescription: 'task and time tracking system with authentication',
-    // description: 'A SaaS application for tracking time and managing tasks with user authentication and detailed reports.',
-    // image: image,
-    // githubUrl: 'https://github.com/blesose/TATT',
-    // technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
-    // featured: true,
-    shortDescription: 'task and time tracking system with authentication',
-    description: 'A SaaS application for tracking time and managing tasks with user authentication and detailed reports (frontend).',
+    title: 'MyLab',
+    category: 'HealthTech',
+    role: 'Personal Project • Full-Stack Developer',
+    shortDescription: 'MyLab Health & Wellness',
+    description: 'Developed a comprehensive wellness platform featuring personalized health modules, authentication, and RESTful backend services.',
     image: image,
-    githubUrl: 'https://github.com/blesose/TATT',
-    technologies: ['React', 'CSS'],
+    githubUrl: 'https://github.com/blesose/MyLabRoyal',
+    liveUrl: 'https://mylabroyal.onrender.com',
+    technologies: ['React', 'TailwindCSS', 'Express', 'JavaScript', 'Node.js' ],
     featured: false,
+    infoTitle: "Engineering Highlights",
+    highlights: [
+    "Authentication and user dashboards",
+    "Multiple health and wellness modules",
+    "RESTful backend services",
+    "Responsive full-stack application"
+  ]
   },
 ];
 

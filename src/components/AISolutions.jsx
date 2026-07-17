@@ -1,30 +1,30 @@
 import React from 'react';
-import { MessageSquare, Shield, Sparkles, Zap, ArrowRight } from 'lucide-react';
+import {  Sparkles,  ArrowRight, Rocket,  Lightbulb, Zap,  TrendingUp, Users, MessageCircle,  HeartPulse, Flame } from 'lucide-react';
 
 const AISolutions = () => {
   const features = [
     {
-      icon: MessageSquare,
-      title: 'Conversational AI',
-      description: 'Context-aware chatbots that understand your business domain and provide intelligent responses.',
+      icon: Lightbulb,
+      title: "Problem Solving",
+      description: "I enjoy creating software that solves practical problems and delivers meaningful value to users.",
       color: 'from-purple-500 to-purple-600',
     },
     {
-      icon: Shield,
-      title: 'Fraud Detection',
-      description: 'Anomaly detection models that protect your transactions and identify suspicious patterns.',
+      icon: Zap,
+      title: "Performance",
+      description: "Building fast, responsive, and accessible web applications.",
       color: 'from-red-500 to-red-600',
     },
     {
-      icon: Sparkles,
-      title: 'Personalization Engine',
-      description: 'Tailored experiences using user behavior analysis and machine learning recommendations.',
+      icon: Users,
+      title: "Collaboration",
+      description: "Working closely with teams and clients from idea to deployment.",
       color: 'from-blue-500 to-blue-600',
     },
     {
-      icon: Zap,
-      title: 'Smart Automation',
-      description: 'Automate repetitive tasks with intelligent workflows and decision-making systems.',
+      icon: TrendingUp,
+      title: "Continous Growth",
+      description: "Always learning, improving, and adopting modern engineering practices.",
       color: 'from-green-500 to-green-600',
     },
   ];
@@ -34,7 +34,7 @@ const AISolutions = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-primary-500 font-mono text-sm tracking-wider">CHAPTER 04</span>
-          <h2 className="section-header mt-2">AI Solutions</h2>
+          <h2 className="section-header mt-2">What Drives My Engineering</h2>
           <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl mx-auto">
             Integrating intelligence into every application I build - (does not necessary mean an AI)
           </p>
@@ -78,7 +78,7 @@ const AISolutions = () => {
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <span className="text-xs font-mono text-zinc-500">AI DEMO</span>
+                <span className="text-xs font-mono text-zinc-500">Portfolio Assitant</span>
               </div>
 
               {/* Chat Preview */}
@@ -88,19 +88,18 @@ const AISolutions = () => {
                     <span className="text-primary-500 text-sm">👤</span>
                   </div>
                   <div className="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-2xl rounded-tl-none px-4 py-3">
-                    <p className="text-sm">I want to build an e-commerce website for my business</p>
+                    <p className="text-sm">I need an e-commerce website</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white text-sm">AI</span>
+                    <span className="text-white text-sm"><Sparkles className={`size-4`}/></span>
                   </div>
                   <div className="flex-1 bg-primary-50 dark:bg-primary-900/20 rounded-2xl rounded-tl-none px-4 py-3">
                     <p className="text-sm text-zinc-800 dark:text-zinc-200">
-                      Great! I specialize in building e-commerce solutions with the MERN stack. 
-                      I can create features like product catalogs, shopping carts, payment integration, 
-                      and order management. What type of products will you be selling?
+                      Great! Blessing builds scalable web applications for startups and businesses. 
+                      I can recommend the right architecture and show you similar projects she has built
                     </p>
                   </div>
                 </div>
@@ -117,15 +116,21 @@ const AISolutions = () => {
 
               {/* Recommendation Cards */}
               <div className="grid grid-cols-3 gap-3 mb-6">
-                {['👕 85%', '👖 92%', '👟 78%'].map((item, i) => (
-                  <div key={i} className="bg-zinc-100 dark:bg-zinc-800 rounded-xl p-3 text-center">
-                    <div className="text-2xl mb-1">{item.split(' ')[0]}</div>
-                    <div className="text-xs font-medium text-primary-500">{item.split(' ')[1]}</div>
-                    <div className="text-[10px] text-zinc-500">match</div>
-                  </div>
-                ))}
-              </div>
-
+            {[
+              { icon: Rocket, label: 'INK' },
+              { icon: Flame, label: 'Refilia' },
+              { icon: HeartPulse, label: 'MyLab' }
+            ].map((item, i) => (
+            <div key={i} className="bg-zinc-100 dark:bg-zinc-800 rounded-xl p-3 text-center">
+            <div className="flex justify-center mb-1">
+            <item.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300" />
+            </div>
+            <div className="text-xs font-medium text-primary-500">{item.label}</div>
+            <div className="text-[10px] text-zinc-500">match</div>
+            </div>
+            ))}
+          </div>
+          
               {/* CTA Button */}
               <button
                 onClick={() => {
@@ -136,7 +141,7 @@ const AISolutions = () => {
                 }}
                 className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:shadow-primary-500/30"
               >
-                Try AI Assistant
+                <MessageCircle />Open Portfolio Assistant
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

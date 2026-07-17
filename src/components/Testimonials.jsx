@@ -15,8 +15,8 @@ const Testimonials = () => {
     {
       id: 2,
       name: 'Miracle Uwaifo',
-      // role: 'Project Manager',
-      // company: 'DevStudio',
+      role: 'Project Manager',
+      company: 'DevStudio',
       content: 'Working with Blessing was a pleasure. She delivered high-quality code and was always eager to learn and improve.',
       image: 'https://i.pravatar.cc/150?img=2',
       rating: 5
@@ -24,8 +24,8 @@ const Testimonials = () => {
     {
       id: 3,
       name: 'Marius',
-      // role: 'Senior Developer',
-      // company: 'InnovateHub',
+      role: 'Senior Developer',
+      company: 'InnovateHub',
       content: 'Blessing shows great promise as a full stack developer. Her projects demonstrate solid understanding of both frontend and backend concepts.',
       image: 'https://i.pravatar.cc/150?img=3',
       rating: 5

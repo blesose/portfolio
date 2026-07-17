@@ -1,28 +1,9 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
-import { PERSONAL_INFO } from '../utils/constants';
+import { ArrowRight } from 'lucide-react';
 import  profileImage from '../assets/profile-image.jpeg'
 
-const Hero = ({ showToast }) => {
-  const stats = [
-    { label: 'Projects Completed', value: '4+' },
-    { label: 'Happy Clients', value: '3' },
-    { label: 'Experience', value: '1 Year' },
-  ];
-
-  const socialLinks = [
-    { icon: Github, href: PERSONAL_INFO.github, label: 'GitHub' },
-    { icon: Linkedin, href: PERSONAL_INFO.linkedin, label: 'LinkedIn' },
-    { icon: Instagram, href: PERSONAL_INFO.instagram, label: 'Instagram' },
-    { icon: Twitter, href: PERSONAL_INFO.twitter, label: 'Twitter' },
-  ];
-
-  const handleSocialClick = (e, platform) => {
-    e.preventDefault();
-    showToast(`Opening ${platform} profile (Demo)`);
-    // In production, window.open(href, '_blank');
-  };
-
+// eslint-disable-next-line no-empty-pattern
+const Hero = ({ }) => {
   return (
     <section className="min-h-screen flex items-center pt-16 bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -43,13 +24,12 @@ const Hero = ({ showToast }) => {
                 <span className="gradient-text">Blessing Oga</span>
               </h1>
               <h2 className="text-3xl md:text-4xl font-medium text-zinc-700 dark:text-zinc-300 mt-2">
-                Junior Full Stack Developer
+                Junior Software Engineer
               </h2>
             </div>
 
             <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-lg">
-              I build production-ready web applications using the MERN stack. 
-              Turning complex problems into elegant digital solutions.
+              Building scalable software that solves real-world problems.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -60,7 +40,7 @@ const Hero = ({ showToast }) => {
                 }}
                 className="btn-primary flex items-center gap-2"
               >
-                View My Work
+                View Projects
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -71,38 +51,8 @@ const Hero = ({ showToast }) => {
                 }}
                 className="btn-outline"
               >
-                Let's Collaborate
+                Get In Touch
               </button>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={(e) => handleSocialClick(e, label)}
-                  className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-primary-500 dark:hover:text-primary-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-3xl font-bold text-primary-500">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-zinc-500 dark:text-zinc-400">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 

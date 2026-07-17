@@ -23,7 +23,7 @@ const Projects = ({ showToast }) => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
             <div>
               <span className="text-primary-500 font-mono text-sm tracking-wider">CHAPTER 03</span>
-              <h2 className="section-header mt-2">Featured Projects</h2>
+              <h2 className="section-header mt-2">Selected Software Engineering Projects</h2>
             </div>
             <a
               href="https://github.com/blesose"
@@ -84,6 +84,11 @@ const Projects = ({ showToast }) => {
                       <span className="tech-pill">
                         +{project.technologies.length - 3}
                       </span>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.highlights.length > 0 && (
+                      <span className="tech-pill"></span>
                     )}
                   </div>
                 </div>

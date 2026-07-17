@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Github, Linkedin, Instagram, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../utils/constants';
 
 const Footer = () => {
@@ -33,9 +33,13 @@ const Footer = () => {
               <span className="font-display font-semibold text-lg">Blessing Oga</span>
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Junior Full Stack Developer specializing in the MERN stack. 
-              Building web applications with passion and precision.
-            </p>
+              Junior Software Engineer</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              Building reliable software that solves
+              real-world problems.
+              </p>
+              
+            
           </div>
 
           {/* Quick Links */}
@@ -60,7 +64,6 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
               <li>{PERSONAL_INFO.email}</li>
-              <li>{PERSONAL_INFO.phone}</li>
               <li>{PERSONAL_INFO.location}</li>
             </ul>
           </div>
@@ -91,7 +94,7 @@ const Footer = () => {
             © {currentYear} Blessing Oga. All rights reserved.
           </p>
           <p className="text-sm text-zinc-600 dark:text-zinc-400 flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using React & Tailwind
+            Designed & Engineered by Blessing Oga
           </p>
         </div>
       </div>

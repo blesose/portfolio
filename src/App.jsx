@@ -5,7 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import AISolutions from './components/AISolutions';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
@@ -39,7 +39,7 @@ function App() {
         <Skills />
         <Projects showToast={showToast} />
         <AISolutions />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact showToast={showToast} />
       </main>
       <Footer />
