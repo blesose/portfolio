@@ -23,7 +23,7 @@ const AISolutions = () => {
     },
     {
       icon: TrendingUp,
-      title: "Continous Growth",
+      title: "Continuous Growth",
       description: "Always learning, improving, and adopting modern engineering practices.",
       color: 'from-green-500 to-green-600',
     },
@@ -36,7 +36,7 @@ const AISolutions = () => {
           <span className="text-primary-500 font-mono text-sm tracking-wider">CHAPTER 04</span>
           <h2 className="section-header mt-2">What Drives My Engineering</h2>
           <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl mx-auto">
-            Integrating intelligence into every application I build - (does not necessary mean an AI)
+            Integrating intelligence into every application I build - (this does not necessarily mean AI)
           </p>
         </div>
 
