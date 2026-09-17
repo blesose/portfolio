@@ -86,11 +86,6 @@ const Projects = ({ showToast }) => {
                       </span>
                     )}
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.highlights.length > 0 && (
-                      <span className="tech-pill"></span>
-                    )}
-                  </div>
                 </div>
               </div>
             ))}
